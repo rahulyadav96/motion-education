@@ -1,0 +1,72 @@
+#navbar.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup{
+        position: absolute;
+        transform: (-50%,-50%);
+        top: 25%;
+        width: 600px;
+        padding:20px 50px;
+        left: 25%;
+        box-shadow: 0 5px 30px rgb(107, 94, 97);
+        background-color: white;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .closeBtn{
+            text-align: right;
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(199, 40, 8);
+            color: white;
+            text-decoration: none;
+            margin-top: 50px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        .closeBtn:hover{
+            box-shadow: 0 5px 30px rgb(87, 77, 79);
+        }
+        h1{
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            input{
+                width: 300px;
+                height: 20px;
+                font-size: 1em;
+            }
+            .sbt{
+                width: 100px;
+                height: auto;
+                padding: 8px;
+                border-radius: 5px;
+                color: white;
+                background-color: navy;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0 5px 30px rgb(87, 77, 79);
+                }
+            }
+        }
+    }
+    #popup.active{
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
