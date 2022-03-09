@@ -12,7 +12,7 @@ export const Login = ({toggle}) =>{
         console.log(formData)
     }
 
-    const handleChange = ()=>{
+    const handleChange = (e)=>{
         const {name,value} = e.target;
         setFormData({...formData,[name]:value})
     }
@@ -25,8 +25,8 @@ export const Login = ({toggle}) =>{
                 <h1>Sign In</h1>
                 <div>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="text" onChange={handleChange} value={formData.email}/>
-                    <input type="password" placeholder="Password" onChange={handleChange} value={formData.password}/>
+                    <input type="text" placeholder="Email" onChange={handleChange} name="email" value={formData.email}/>
+                    <input type="password" placeholder="Password" onChange={handleChange} name="password" value={formData.password}/>
                     <input type="submit" value="Login" className="sbt"/>
                 </form>
                 </div>
