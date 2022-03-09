@@ -1,10 +1,23 @@
 import { Home } from "./components/Home";
-import {Navbar} from "./components/Navbar"
+import {Navbar} from "./components/Navbar";
+import {Login} from "./components/Login"
 function App() {
+  const toggle = ()=>{
+    var blur = document.getElementById("main");
+    blur.classList.toggle('active')
+    var popup = document.getElementById("popup");
+    popup.classList.toggle('active')
+}
   return (
     <div className="App" >
-      <Navbar />
+      <div id="main">
+      <Navbar toggle={toggle} />
       <Home />
+
+      </div>
+      <div id="popup">
+          <Login toggle={toggle} />
+      </div>
     </div>
   );
 }

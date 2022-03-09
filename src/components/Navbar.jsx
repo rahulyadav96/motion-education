@@ -1,12 +1,12 @@
 import './navbar.scss'
 import {Login} from "./Login"
-export const Navbar = () => {
-    const toggle = ()=>{
-        var blur = document.getElementById("navbar");
-        blur.classList.toggle('active')
-        var popup = document.getElementById("popup");
-        popup.classList.toggle('active')
-    }
+export const Navbar = ({toggle}) => {
+    // const toggle = ()=>{
+    //     var blur = document.getElementById("navbar");
+    //     blur.classList.toggle('active')
+    //     var popup = document.getElementById("popup");
+    //     popup.classList.toggle('active')
+    // }
     return (
         <>
             <div id="navbar">
@@ -18,9 +18,9 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div id="popup">
+            {/* <div id="popup">
                 <Login toggle={toggle} />
-            </div>
+            </div> */}
             
         </>
     )
